@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Giriş Yap - NightOps Drop</title>
+        <title>Login - NightOps Drop</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" th:href="@{/style.css}"/>
@@ -22,17 +22,17 @@
             <section class="section">
                 <div class="container" style="max-width: 480px;">
                     <div class="card">
-                        <h2 class="section-title" style="text-align: center;">Giriş Yap</h2>
+                        <h2 class="section-title" style="text-align: center;">Login</h2>
                         <span th:if='${param.error}' style='text-align:center;'>
-                            <i>Kullanıcı adı veya parola hatalı!</i>
+                            <i>Incorrect username or password!</i>
                         </span>
                         <span th:if='${param.logout}'>
-                            <i>Başarılı bir şekilde çıkış yapıldı.</i>
+                            <i>The logout was successful.</i>
                         </span>
                         <form method="post" action="#" th:action='@{/authenticateTheUser}' style="display: flex; flex-direction: column; gap: 20px;">
                             <div>
                                 <label for="username" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text);">
-                                    Kullanıcı Adı
+                                    Username
                                 </label>
                                 <input 
                                     type="text" 
@@ -46,7 +46,7 @@
 
                             <div>
                                 <label for="password" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text);">
-                                    Parola
+                                    Password
                                 </label>
                                 <input 
                                     type="password" 
@@ -58,7 +58,7 @@
                                     style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                            <button type="submit" class="btn btn-primary">Login</button>
                         </form>
                     </div>
                 </div>

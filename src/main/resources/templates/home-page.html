@@ -15,9 +15,11 @@
                         <span class="logo-text">NightOps Drop</span>
                     </div>
                     <nav class="nav">
-                        <a href="#yukle" class="nav-link">Yükle</a>
-                        <a href="#dosyalarim" class="nav-link">Dosyalarım</a>
-                        <a href="#ayarlar" class="nav-link">Ayarlar</a>
+                        <a href="#yukle" class="nav-link" data-lang="nav_upload">Yükle</a>
+                        <a href="#dosyalarim" class="nav-link" data-lang="nav_files">Dosyalarım</a>
+                        <a href="#ayarlar" class="nav-link" data-lang="nav_settings">Ayarlar</a>
+                        <a href="javascript:void(0)" onclick="setLanguage('tr')" class="lang-switch" id="btn-tr">[TR]</a>
+                        <a href="javascript:void(0)" onclick="setLanguage('en')" class="lang-switch" id="btn-en">[EN]</a>
                     </nav>
                 </div>
             </div>
@@ -27,8 +29,8 @@
                 <div class="container">
                     <div class="hero-card">
                         <h1 class="hero-title">NightOps Drop</h1>
-                        <p class="hero-subtitle">Dosya yükleme kontrol merkezi</p><br> ~ Minter</div>
-                </div>
+                        <p class="hero-subtitle" data-lang="hero_subtitle">Dosya yükleme kontrol merkezi</p>
+                    </div>
                 </div>
             </section>
 
@@ -36,38 +38,36 @@
                 <div class="container">
                     <div class="card">
 
-                        <h2 class="section-title">Dosya Yükle</h2>
-
+                        <h2 class="section-title" data-lang="upload_title">Dosya Yükle</h2>
                         <form method="post" enctype="multipart/form-data" action="#" class="upload-form" 
                               th:action="@{/files/upload}"
                               th:object="${dropfile}">
                             <span th:if="${message}" th:text="${message}"></span>
                             <div class="dropzone">
                                 <div class="dropzone-icon"></div>
-                                <label for="file-input" class="dropzone-label">
-                                    Dosyayı buraya bırak ya da seç
-                                </label>
+                                <label for="file-input" class="dropzone-label" data-lang="dropzone_label">Dosyayı buraya bırak ya da seç</label>
                                 <input type="file" name="file" id="file-input" class="file-input"  aria-label="Dosya seç">
                                 <p class="dropzone-hint">Maks 20 MB</p>
                             </div>
                             <div>
-                                <h3 class="subsection-title">Dosya İsmi</h3>
+                                <h3 class="subsection-title" data-lang="label_filename">Dosya İsmi</h3>
                                 <input type="text" class="link-input" th:field="*{fileName}" 
                                        placeholder="payload.docx">
                                 <span th:if="${#fields.hasErrors('fileName')}" th:errors='*{fileName}'></span>
                             </div>
                             <div>
-                                <h3 class="subsection-title">Dosya Path</h3>
-                                <input type="text" class="link-input" th:field="*{filePath}" placeholder="payload.docx">
+                                <h3 class="subsection-title" data-lang="label_path">Dosya Path</h3> <input type="text" class="link-input" th:field="*{filePath}" placeholder="payload.docx">
                                 <span th:if="${#fields.hasErrors('filePath')}" th:errors='*{filePath}'></span>
                             </div>
+                            
+
 
                             <details class="options-accordion">
-                                <summary class="options-summary">İleri Seçenekler</summary>
+                                <summary class="options-summary" data-lang="advanced_options">İleri Seçenekler</summary>
                                 <div class="options-content">
                                     <div class="option-row">
                                         <label for="single-use" class="option-label">
-                                            <span>Tek kullanımlık</span>
+                                            <label for="single-use" class="option-label"><span data-lang="one_time">Tek kullanımlık</span>...</label>
                                             <input type="checkbox" id="single-use" th:field="*{oneTime}"  checked>
                                             <span th:if="${#fields.hasErrors('oneTime')}" th:errors='*{oneTime}'></span>
                                             <!--<span class="toggle-switch"></span>-->
@@ -75,7 +75,7 @@
                                     </div>
                                     <div class="option-row">
                                         <label for="ttl" class="option-label-block">
-                                            <span>Geçerlilik süresi (TTL)</span>
+                                            <label for="ttl" class="option-label-block"><span data-lang="ttl_label">Geçerlilik süresi (TTL)</span>...</label>
                                             <input type="datetime-local" id="ttl" th:field="*{timeToLive}" class="datetime-input">
                                             <span th:if="${#fields.hasErrors('timeToLive')}" th:errors='*{timeToLive}'></span>
                                         </label>
@@ -83,17 +83,18 @@
                                 </div>
                             </details>
 
-                            <button type="submit" class="btn btn-primary">Yükle</button>
+                            <button type="submit" class="btn btn-primary" data-lang="btn_upload">Yükle</button>
+
                         </form>
 
                         <div class="success-card" th:if='${success}'>
                             <div class="success-header">
                                 <div class="success-icon"></div>
-                                <h3 class="success-title">Hazır! Link oluşturuldu.</h3>
+                                <h3 class="success-title" data-lang="success_title">Hazır! Link oluşturuldu.</h3>
                             </div>
                             <div class="file-info">
                                 <div class="file-info-row">
-                                    <span class="file-info-label">Dosya:</span>
+                                    <span class="file-info-label" data-lang="th_file">Dosya:</span>
                                     <span class="file-info-value" th:text='${file.fileName}'></span>
                                 </div>
                                 <div class="file-info-row">
@@ -141,12 +142,12 @@
                             <table id="dosyalarimTablosu" class="files-table">
                                 <thead>
                                     <tr>
-                                        <th>Dosya</th>
-                                        <th>Boyut</th>
-                                        <th>Eklenme Tarih</th>
-                                        <th>İndirme</th>
-                                        <th>Durum</th>
-                                        <th>Kısa Link</th>
+                                        <th data-lang="th_file">Dosya</th>
+                                        <th data-lang="th_size">Boyut</th>
+                                        <th data-lang="th_date">Eklenme Tarih</th>
+                                        <th data-lang="th_download">İndirme</th>
+                                        <th data-lang="th_status">Durum</th>
+                                        <th data-lang="th_shortlink">Kısa Link</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -167,163 +168,275 @@
                                         <td>
                                             <a class="btn btn-blue btn-sm" 
                                                th:href="@{/files/delete/{id}(id=${file.id})}"
-                                               onclick="return confirm('Emin misin?');">
-                                                Sil
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                               onclick="return confirm(translations[localStorage.getItem('selectedLang') || 'tr']['confirm_msg']);"
+                                               Sil
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                        <div class="empty-state" style="display: none;">
-                            <div class="empty-icon"></div>
-                            <p class="empty-text">Henüz dosyan yok. Hemen yükle.</p>
+                    <div class="empty-state" style="display: none;">
+                        <div class="empty-icon"></div>
+                        <p class="empty-text" data-lang="empty_text">Henüz dosyan yok. Hemen yükle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="detay" class="section">
+            <div class="container">
+                <div class="card">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" th:text='${clickedCount}'></div>
+                            <div class="stat-label" data-lang="stat_total_download">Toplam İndirilen</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" th:text='${countPassiveDropFile}'></div>
+                            <div class="stat-label" data-lang="stat_total_expired">Toplam Sona eren</div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-
-
-            <section id="detay" class="section">
-                <div class="container">
-                    <div class="card">
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="stat-value" th:text='${clickedCount}'></div>
-                                <div class="stat-label">Toplam İndirilen</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-value" th:text='${countPassiveDropFile}'></div>
-                                <div class="stat-label">Toplam Sona eren</div>
-                            </div>
+        <section id="detay" class="section" th:each='file : ${files}' th:if='${file.isActive}'>
+            <div class="container">
+                <div class="card">
+                    <div class="detail-header">
+                        <h2 class="section-title" th:text="${file.fileName}"></h2>
+                        <div class="badge-group">
+                            <span class="badge badge-primary" th:text="${file.isOneTime} ? 'Tek Kullanımlık' : 'Sınırlı Süre'"></span>
+                            <span class="badge badge-warn" th:text="'TTL: '+${file.timeToLive}"> </span>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section id="detay" class="section" th:each='file : ${files}' th:if='${file.isActive}'>
-                <div class="container">
-                    <div class="card">
-                        <div class="detail-header">
-                            <h2 class="section-title" th:text="${file.fileName}"></h2>
-                            <div class="badge-group">
-                                <span class="badge badge-primary" th:text="${file.isOneTime} ? 'Tek Kullanımlık' : 'Sınırlı Süre'"></span>
-                                <span class="badge badge-warn" th:text="'TTL: '+${file.timeToLive}"> </span>
-                            </div>
-                        </div>
 
 
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="stat-value" th:text='${file.clickedCount}'>3</div>
-                                <div class="stat-label">İndirilen</div>
-                            </div>
-                        </div>
-                        <!-- Pasif Yap butonu -->
-                        <div style="margin-top: 1.5rem;">
-                            <form action='#' th:action='@{/files/passive/{id}(id=${file.id})}' method='post'>
-                                <button class="btn btn-warn btn-sm" type="submit">Pasif Yap</button>
-                            </form>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" th:text='${file.clickedCount}'>3</div>
+                            <div class="stat-label" data-lang="stat_downloaded">İndirilen</div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section id="ayarlar" class="section">
-                <div class="container">
-                    <div class="card">
-                        <h2 class="section-title">Ayarlar</h2>
-                        <form th:action="@{/config/save}" method="post" th:object="${config}">
-                            <div class="success-header" th:if='${successConfig}'>
-                                <h3 class="success-title">Ayarlar kaydedildi.</h3>
-                            </div>
-                            <div class="settings-group">
-                                <h3 class="subsection-title">Domain İsmi</h3>
-                                <input type="hidden"  th:field="*{id}">
-                                <input type="text" class="link-input" placeholder="websitem.com" th:field="*{domainName}">
-                                <p class="settings-hint">Domain ismi linkleri oluşturulmada kullanılacaktır. (Ex: website.com diye giriş yapınız.)</p>
-                            </div>
-
-                            <button type="submit" class="btn btn-secondary">Ayarları Kaydet</button>
+                    <!-- Pasif Yap butonu -->
+                    <div style="margin-top: 1.5rem;">
+                        <form action='#' th:action='@{/files/passive/{id}(id=${file.id})}' method='post'>
+                            <button class="btn btn-warn btn-sm" type="submit" data-lang="btn_passive">Pasif Yap</button>
                         </form>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
+        <section id="ayarlar" class="section">
+            <div class="container">
+                <div class="card">
+                    <h2 class="section-title" data-lang="settings_title">Ayarlar</h2>
+                    <form th:action="@{/config/save}" method="post" th:object="${config}">
+                        <div class="success-header" th:if='${successConfig}'>
+                            <h3 class="success-title">Ayarlar kaydedildi.</h3>
+                        </div>
+                        <div class="settings-group">
+                            <h3 class="subsection-title" data-lang="domain_name">Domain İsmi</h3>
+                            <input type="hidden"  th:field="*{id}">
+                            <input type="text" class="link-input" placeholder="websitem.com" th:field="*{domainName}">
+                            <p class="settings-hint" data-lang="settings_hint">Domain ismi linkleri oluşturulmada kullanılacaktır.</p>
+                        </div>
 
-            <section class='section'>
-                <div class="container">
-                    <form th:action='@{/logout}' action='#' method='POST'>
-                        <input type='submit' class='btn btn-primary'  style="float:right;" value='Çıkış Yap'/>
+                        <button type="submit" class="btn btn-secondary" data-lang="btn_save_settings">Ayarları Kaydet</button>
                     </form>
                 </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container">
-                <p class="footer-text">© 2025 NightOps Drop. Hiç bir hakkı saklı değildir.</p>
             </div>
-        </footer>
-        
-         <script>
-            document.getElementById('file-input').addEventListener('change', function (event) {
-                const file = event.target.files[0];
-                const label = document.querySelector('.dropzone-label');
-                const hint = document.querySelector('.dropzone-hint');
+        </section>
 
-                if (file) {
-                    label.textContent = file.name; // Dosya adını göster
-                    hint.textContent = `(${(file.size / 1024 / 1024).toFixed(2)} MB)`; // Dosya boyutunu da göster
-                } else {
-                    label.textContent = 'Dosyayı buraya bırak ya da seç';
-                    hint.textContent = 'Maks 20 MB';
-                }
-            });
-        </script>     
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const tabs = document.querySelectorAll(".filter-tab");
-                const rows = document.querySelectorAll(".files-table tbody tr");
+        <section class='section'>
+            <div class="container">
+                <form th:action='@{/logout}' action='#' method='POST'>
+                    <input type='submit' class='btn btn-primary' style="float:right;" value='Çıkış Yap' data-lang="btn_logout"/>
+                </form>
+            </div>
+        </section>
+    </main>
 
-                tabs.forEach(tab => {
-                    tab.addEventListener("click", function (e) {
-                        e.preventDefault();
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text" data-lang="footer_text">© 2025 NightOps Drop. Hiç bir hakkı saklı değildir.</p>
+        </div>
+    </footer>
 
-                        // Aktif sekmeyi değiştir
-                        tabs.forEach(t => t.classList.remove("filter-tab-active"));
-                        this.classList.add("filter-tab-active");
+    <script>
+        document.getElementById('file-input').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            const label = document.querySelector('.dropzone-label');
+            const hint = document.querySelector('.dropzone-hint');
 
-                        const filter = this.textContent.trim();
+            if (file) {
+                label.textContent = file.name;
+                hint.textContent = `(${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+            } else {
+                label.textContent = 'Dosyayı buraya bırak ya da seç';
+                hint.textContent = 'Maks 20 MB';
+            }
+        });
+    </script>     
 
-                        rows.forEach(row => {
-                            const statusText = row.querySelector('[data-label="Durum"] span')?.textContent.trim();
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabs = document.querySelectorAll(".filter-tab");
+            const rows = document.querySelectorAll(".files-table tbody tr");
 
-                            // Filtreleme mantığı
-                            if (filter === "Tümü") {
-                                row.style.display = "";
-                            } else if (filter === "Aktif" && statusText === "Aktif") {
-                                row.style.display = "";
-                            } else if (filter === "Süresi dolmuş" && statusText === "Pasif") {
-                                row.style.display = "";
-                            } else {
-                                row.style.display = "none";
-                            }
-                        });
+            tabs.forEach(tab => {
+                tab.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    tabs.forEach(t => t.classList.remove("filter-tab-active"));
+                    this.classList.add("filter-tab-active");
+
+                    const filter = this.textContent.trim();
+
+                    rows.forEach(row => {
+                        const statusText = row.querySelector('[data-label="Durum"] span')?.textContent.trim();
+
+                        if (filter === "Tümü") {
+                            row.style.display = "";
+                        } else if (filter === "Aktif" && statusText === "Aktif") {
+                            row.style.display = "";
+                        } else if (filter === "Süresi dolmuş" && statusText === "Pasif") {
+                            row.style.display = "";
+                        } else {
+                            row.style.display = "none";
+                        }
                     });
                 });
             });
-        </script>
+        });
+    </script>
 
-        <script>
-            $(document).ready(function () {
-                $('#dosyalarimTablosu').DataTable();
+    <script>
+        $(document).ready(function () {
+            $('#dosyalarimTablosu').DataTable();
+        });
+    </script>
+
+    <script>
+        const translations = {
+            tr: {
+                nav_upload: "Yükle",
+                nav_files: "Dosyalarım",
+                nav_settings: "Ayarlar",
+                hero_subtitle: "Dosya yükleme kontrol merkezi",
+                upload_title: "Dosya Yükle",
+                dropzone_label: "Dosyayı buraya bırak ya da seç",
+                label_filename: "Dosya İsmi",
+                label_path: "Dosya Path",
+                label_mime: "Spoofing Mime Type",
+                label_pass: "Şifre",
+                advanced_options: "İleri Seçenekler",
+                one_time: "Tek kullanımlık",
+                ttl_label: "Geçerlilik süresi (TTL)",
+                btn_upload: "Yükle",
+                success_title: "Hazır! Link oluşturuldu.",
+                section_files: "Dosyalarım",
+                tab_all: "Tümü",
+                tab_active: "Aktif",
+                tab_expired: "Süresi dolmuş",
+                th_file: "Dosya",
+                th_size: "Boyut",
+                th_date: "Eklenme Tarih",
+                th_download: "İndirme",
+                th_status: "Durum",
+                th_shortlink: "Kısa Link",
+                btn_delete: "Sil",
+                confirm_msg: "Emin misin?",
+                empty_text: "Henüz dosyan yok. Hemen yükle.",
+                success_link_label: "Paylaşım linki",
+                success_hint: "Kopyalamak için seç & Ctrl/Cmd+C",
+                stat_total_download: "Toplam İndirilen",
+                stat_total_expired: "Toplam Sona eren",
+                stat_downloaded: "İndirilen",
+                btn_passive: "Pasif Yap",
+                settings_title: "Ayarlar",
+                domain_name: "Domain İsmi",
+                settings_hint: "Domain ismi linkleri oluşturulmada kullanılacaktır.",
+                btn_save_settings: "Ayarları Kaydet",
+                btn_logout: "Çıkış Yap",
+                footer_text: "© 2025 NightOps Drop. Hiç bir hakkı saklı değildir."
+            },
+            en: {
+                nav_upload: "Upload",
+                nav_files: "My Files",
+                nav_settings: "Settings",
+                hero_subtitle: "File upload control center",
+                upload_title: "Upload File",
+                dropzone_label: "Drop file here or select",
+                label_filename: "File Name",
+                label_path: "File Path",
+                label_mime: "Spoofing Mime Type",
+                label_pass: "Password",
+                advanced_options: "Advanced Options",
+                one_time: "One-time download",
+                ttl_label: "Time To Live (TTL)",
+                btn_upload: "Upload",
+                success_title: "Ready! Link created.",
+                section_files: "My Files",
+                tab_all: "All",
+                tab_active: "Active",
+                tab_expired: "Expired",
+                th_file: "File",
+                th_size: "Size",
+                th_date: "Date Added",
+                th_download: "Downloads",
+                th_status: "Status",
+                th_shortlink: "Short Link",
+                btn_delete: "Delete",
+                confirm_msg: "Are you sure?",
+                stat_total_download: "Total Downloads",
+                stat_total_expired: "Total Expired",
+                stat_downloaded: "Downloaded",
+                btn_passive: "Make Passive",
+                empty_text: "No files yet. Upload now.",
+                success_link_label: "Share link",
+                success_hint: "Select & Ctrl/Cmd+C to copy",
+                settings_title: "Settings",
+                domain_name: "Domain Name",
+                settings_hint: "Domain name will be used to generate links.",
+                btn_save_settings: "Save Settings",
+                btn_logout: "Logout",
+                footer_text: "© 2025 NightOps Drop. All rights reserved."
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('selectedLang', lang);
+
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const key = el.getAttribute('data-lang');
+                if (translations[lang][key]) {
+                    if (el.tagName === 'INPUT' && el.type === 'submit') {
+                        el.value = translations[lang][key];
+                    } else {
+                        el.innerText = translations[lang][key];
+                    }
+                }
             });
-        </script>
 
+            document.querySelectorAll('[data-lang-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-lang-placeholder');
+                if (translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+        }
 
-    </body>
+        document.addEventListener("DOMContentLoaded", function () {
+            const savedLang = localStorage.getItem('selectedLang') || 'tr';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
 </html>
