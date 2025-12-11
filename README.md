@@ -82,8 +82,8 @@ This project is part of a comprehensive cybersecurity training course. Below is 
 | **Advanced IP Logging** | ❌ | ✅ **(Detect Proxies/VPNs)** |
 | **MIME-Type Spoofing** | ❌ | ✅ **(Bypass Firewalls)** |
 | **Password Protected Files**| ❌ | ✅ **(Anti-Scanner / Sandbox)** |
-| **One-Time URLs (Burn)** | ❌ | ✅ **(Self-Destruct Links)** |
-| **TTL (Time-To-Live)** | ❌ | ✅ **(Auto-Expire Links)** |
+| **One-Time URLs (Burn)** | ✅ | ✅ **(Self-Destruct Links)** |
+| **TTL (Time-To-Live)** | ✅ | ✅ **(Auto-Expire Links)** |
 
 ---
 
