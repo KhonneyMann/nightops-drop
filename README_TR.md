@@ -5,10 +5,11 @@
 </div>
 
 <br>
-<div align="center">
-Dert insanı yer imiş,
 
-Yine gönlüm hoş değil.
+<div align="center">
+  <em>"Dert insanı yer imiş,
+
+ Yine gönlüm hoş değil."</em>
 </div>
 
 <div align="center">
@@ -19,7 +20,7 @@ Yine gönlüm hoş değil.
   <h1>NightOps Drop</h1>
   
   <p>
-    <strong>Yeni Nesil Payload Dağıtım & Red Team Operasyon Platformu</strong>
+    <strong>Yeni Nesil Payload Dağıtım & Kırmızı Takım Operasyon Platformu</strong>
   </p>
 
   <p>
@@ -33,13 +34,18 @@ Yine gönlüm hoş değil.
       <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
     </a>
     <a href="https://mintercoder.gumroad.com/l/nightops-drop">
-      <img src="https://img.shields.io/badge/Kurs-Mevcut-FF424D?style=for-the-badge&logo=patreon&logoColor=white" alt="Patreon">
+      <img src="https://img.shields.io/badge/Kurs-Mevcut-FF424D?style=for-the-badge&logo=patreon&logoColor=white" alt="Gumroad">
+    </a>
+  </p>
+  <p align="center">
+    <a href="https://mintercoder.gumroad.com/l/nightops-drop" target="_blank">
+      <img src="https://img.shields.io/badge/Tam%20Eri%C5%9Fim-Gumroad-FF424D?style=for-the-badge&logo=gumroad&logoColor=white" />
     </a>
   </p>
 
   <h3>
     <a href="http://nightopsdrop.mintercoder.net/">Canlı Demo</a> •
-    <a href="https://mintercoder.gumroad.com/l/nightops-drop">Eğitimi Satın Al</a> •
+    <a href="https://mintercoder.gumroad.com/l/nightops-drop">Eğitimi Alın</a> •
     <a href="#-mimari">Mimari</a>
   </h3>
 </div>
@@ -48,17 +54,17 @@ Yine gönlüm hoş değil.
 
 ## ⚡ NightOps Drop Nedir?
 
-**NightOps Drop**, tamamen **Java 21** ve **Spring Boot 4.0** ile geliştirilmiş; güvenli, gizli ve gelişmiş bir payload dağıtım sistemidir.
+**NightOps Drop**, tamamen **Java 21** ve **Spring Boot 4.0** ile geliştirilmiş güvenli, gizli ve gelişmiş bir payload (yük) dağıtım sistemidir.
 
-Geleneksel dosya sunucularının (Python `http.server` veya Apache gibi) aksine, NightOps Drop **Red Team Operasyonları** için özel olarak mühendislik edilmiştir. Temel odak noktası **OpSec (Operasyonel Güvenlik)**, tespit edilmekten kaçınma (evasion) ve Mavi Takım (Blue Team) aktivitelerinin detaylı takibidir.
+Geleneksel dosya sunucularının (Python `http.server` veya Apache gibi) aksine, NightOps Drop özellikle **Kırmızı Takım Operasyonları (Red Team Operations)** için tasarlanmıştır. Odak noktası **OpSec (Operasyonel Güvenlik)**, gizlilik ve Mavi Takım (Blue Team) aktivitelerinin detaylı takibidir.
 
-Bu depo, projenin **Topluluk Sürümü (Community Edition)** içeriğini barındırır. Tam kaynak koduna erişmek ve bu aracı sıfırdan nasıl geliştireceğinizi öğrenmek için [Eğitim Serimize](https://mintercoder.gumroad.com/l/nightops-drop) göz atın.
+Bu depo **Community Edition (Topluluk Sürümü)** içindir. Tam kaynak koduna erişmek ve bu aracı sıfırdan nasıl geliştireceğinizi öğrenmek için [Eğitim Serimize](https://mintercoder.gumroad.com/l/nightops-drop) göz atın.
 
 ---
 
 ## 🎮 Canlı Demo
 
-NightOps Drop'un gücünü, henüz kurulum yapmadan önce deneyimleyin.
+NightOps Drop'u kendiniz inşa etmeden önce gücünü deneyimleyin.
 
 | **Erişim Noktası** | **Detaylar** |
 | :--- | :--- |
@@ -66,63 +72,67 @@ NightOps Drop'un gücünü, henüz kurulum yapmadan önce deneyimleyin.
 | 👤 **Kullanıcı Adı** | `nightops` |
 | 🔑 **Şifre** | `drop123` |
 
-> *Not: Demo ortamı periyodik olarak sıfırlanır. Lütfen hassas verilerinizi yüklemeyiniz.*
+> *Not: Demo ortamı periyodik olarak sıfırlanır. Lütfen hassas veriler yüklemeyiniz.*
 
 ---
 
-## 🚀 Özellikler: Community vs. Professional
+## 🚀 Özellikler: Topluluk ve Profesyonel Sürüm
 
-Bu proje kapsamlı bir siber güvenlik eğitiminin parçasıdır. Aşağıda, açık kaynaklı demo sürümü ile tam eğitim sürümü arasındaki farkları görebilirsiniz.
+Bu proje kapsamlı bir siber güvenlik eğitim kursunun parçasıdır. Aşağıda açık kaynak demoda nelerin mevcut olduğu ve tam eğitim sürümünde nelerin bulunduğu karşılaştırılmıştır.
 
-| Özellik | Community / Demo | **Professional Course Edition** |
+| Özellik | Topluluk / Demo | **Profesyonel Kurs Sürümü** |
 | :--- | :---: | :---: |
 | **Teknoloji Yığını** | Java 21 + Spring Boot 4.0 | Java 21 + Spring Boot 4.0 |
 | **Güvenli Dosya Barındırma** | ✅ | ✅ |
-| **Özel Link (Alias) Tanımlama** | ✅ | ✅ |
+| **Özel İsimlendirme (Aliasing)** | ✅ | ✅ |
 | **Docker Desteği** | ✅ | ✅ |
-| **Admin Paneli** | ✅ | ✅ |
+| **Yönetici Paneli** | ✅ | ✅ |
 | **Gelişmiş IP Loglama** | ❌ | ✅ **(Proxy/VPN Tespiti)** |
-| **MIME-Type Spoofing** | ❌ | ✅ **(Firewall Atlatma)** |
-| **Şifre Korumalı Dosyalar**| ❌ | ✅ **(Anti-Scanner / Sandbox)** |
-| **Tek Kullanımlık URL (Burn)** | ✅ | ✅ **(Kendini İmha Eden Linkler)** |
-| **TTL (Time-To-Live)** | ✅ | ✅ **(Zaman Ayarlı Linkler)** |
-
+| **MIME-Type Sahteciliği** | ❌ | ✅ **(Güvenlik Duvarı Atlatma)** |
+| **Şifre Korumalı Dosyalar**| ❌ | ✅ **(Anti-Tarayıcı / Sandbox)** |
+| **Tek Seferlik Linkler (Burn)** | ✅ | ✅ **(Kendini İmha Eden Linkler)** |
+| **TTL (Yaşam Süresi)** | ✅ | ✅ **(Otomatik Süresi Dolan Linkler)** |
+| **Dil Desteği** | 🇹🇷 TR + 🇬🇧 EN | 🇹🇷 TR + 🇬🇧 EN |
 ---
+<div align="center">
+  <a href="https://mintercoder.gumroad.com/l/nightops-drop">
+    <img src="https://img.shields.io/badge/Tam_Eri%C5%9Fimi_A%C3%A7-Gumroad_%C3%9Czerinden_Al-FF424D?style=for-the-badge&logo=gumroad&logoColor=white">
+  </a>
+</div>
 
-## 🎓 Eğitimi Al: Kaynak Kodu & Eğitim
+## 🎓 Eğitimi Alın: Kaynak Kod & Eğitim
 
-Java ile **Malware Geliştirme** ve **Red Team Araçları** yazma konusunda uzmanlaşmak mı istiyorsunuz?
-Bu kursta, NightOps Drop'u sıfırdan inşa ediyor; **Network Interceptor'ları**, **Header Manipülasyonu** ve **Güvenli Mimari** gibi ileri seviye konuları işliyoruz.
+Java ile **Malware Development (Zararlı Yazılım Geliştirme)** ve **Red Team Araçları** konusunda uzmanlaşmak mı istiyorsunuz?
+Bu kursta, **Ağ Interceptor'ları**, **Header Manipülasyonu** ve **Güvenli Mimari** gibi ileri düzey konuları ele alarak NightOps Drop'u sıfırdan inşa ediyoruz.
 
-### 🌍 Dil Desteği (Language Support)
+### 🌍 Dil Desteği
 
 | İçerik Türü | Dil | Not |
 | :--- | :--- | :--- |
-| **Seslendirme / Anlatım** | 🇹🇷 Türkçe | Anadilde detaylı anlatım. |
-| **Altyazı** | 🇬🇧 İngilizce | Global standartlarda İngilizce altyazı. |
-| **Kaynak Kod** | 🇬🇧 İngilizce | Kod yorumları ve değişkenler global standarttadır. |
+| **Seslendirme / Anlatım** | 🇹🇷 Türkçe | Ana dilde detaylı anlatım. |
+| **Altyazılar** | 🇬🇧 İngilizce | Profesyonel İngilizce altyazılar dahildir. |
+| **Kaynak Kod** | 🇬🇧 İngilizce | Kod yorumları ve değişkenler global İngilizce standartlarındadır. |
 
 ### 🌟 Neler Öğreneceksiniz?
-* **Çekirdek Mantık:** Spring Boot ile C2 operasyonlarına hazır bir dosya sunucusu geliştirmek.
-* **OpSec:** Güvenlik duvarlarını ve filtreleri atlatmak için **MIME-Type Spoofing** (Örn: `.exe` dosyasını ağda `.pdf` gibi göstermek).
-* **Defansif Kodlama:** Payloadlara şifre koruması ve **TTL (Time-To-Live)** ekleyerek analizcileri engelleme.
-* **Dağıtım:** Java uygulamalarını Dockerize ederek hızlı operasyonlara hazırlama.
+* **Çekirdek Mantık:** Spring Boot ile C2'ye hazır bir dosya sunucusu oluşturma.
+* **OpSec:** Güvenlik duvarlarını kandırmak için **MIME-Type Sahteciliği** uygulama (Örn: Ağda `.exe` dosyalarını `.pdf` gibi sunmak).
+* **Defansif Kodlama:** Analistleri engellemek için payloadlara şifre koruması ve **TTL (Yaşam Süresi)** ekleme.
+* **Dağıtım (Deployment):** Hızlı operasyonel kurulum için Java uygulamalarını Dockerize etme.
 
 ### 🛒 Nasıl Satın Alınır?
 
-**Tam Kaynak Koduna**, **Video Eğitimlere** ve **Özel Discord** kanalına anında erişmek için aşağıdaki bağlantıları kullanabilirsiniz:
+Aşağıdaki bağlantılar aracılığıyla **Tam Kaynak Kodu**, **Video Eğitimleri** ve **Özel Discord Erişimi**ne hemen sahip olabilirsiniz:
 
 <div align="center">
 
-| **Platform** | **Link** | **İçerik** |
+| **Platform** | **Bağlantı** | **İçerik** |
 | :--- | :--- | :--- |
 | 🌍 **Resmi Site** | **[mintercoder.net](https://mintercoder.net)** | Kurs + Kod + Ömür Boyu Erişim |
-| 🧡 **Gumroad** | **[Gumroad'dan al](https://mintercoder.gumroad.com/l/nightops-drop)** | Kurs + Kod + Destek |
+| 🧡 **Gumroad** | **[Gumroad'dan Satın Al](https://mintercoder.gumroad.com/l/nightops-drop)** | Kurs + Kod + Destek |
 
 <a href="https://mintercoder.gumroad.com/l/nightops-drop">
-  <img src="https://img.shields.io/badge/Tam_Erişim_Sağla-Hemen_Al-FF424D?style=for-the-badge&logo=gumroad&logoColor=white" alt="Gumroad’dan Satın Al">
+  <img src="https://img.shields.io/badge/Tam_Eri%C5%9Fimi_A%C3%A7-Hemen_Sat%C4%B1n_Al-FF424D?style=for-the-badge&logo=gumroad&logoColor=white" alt="Gumroad üzerinden satın al">
 </a>
-
 
 </div>
 
@@ -131,21 +141,20 @@ Bu kursta, NightOps Drop'u sıfırdan inşa ediyor; **Network Interceptor'ları*
 ## 🎥 NightOps Drop — Demo GIF
 
 <div align="center">
-  <img src="https://images.mintercoder.net/mintercoder-main/nightops_drop_gif.gif" alt="NightOps Drop Demo" width="800">
+  <img src="https://images.mintercoder.net/mintercoder-main/readme_tr_gif.gif" alt="NightOps Drop Demo" width="800">
   <br>
-  <em>NightOps Drop’un çalışma akışı — gerçek zamanlı önizleme</em>
+  <em>NightOps Drop iş akışı — gerçek zamanlı önizleme</em>
 </div>
-
 
 ## 🛠️ Teknoloji Yığını
 
 * **Dil:** Java 21+ (Modern Özellikler)
 * **Framework:** Spring Boot 4.0 (Performans & Güvenlik)
 * **Veritabanı:** MySQL (Gömülü & Taşınabilir)
-* **Frontend:** Thymeleaf + Custom CSS + Tailwind
+* **Ön Yüz:** Thymeleaf + Özel CSS + Tailwind
 * **Konteyner:** Docker & Docker Compose
 
-## 📝 Yapılacaklar & Yol Haritası (Roadmap)
+## 📝 Yapılacaklar & Yol Haritası
 
 - [ ] **Spring AI Entegrasyonu** (Yakında)
 
@@ -153,11 +162,23 @@ Bu kursta, NightOps Drop'u sıfırdan inşa ediyor; **Network Interceptor'ları*
 
 ## ⚠️ Yasal Uyarı
 
-> **NightOps Drop**, yalnızca eğitim amaçlı ve yetkilendirilmiş güvenlik testleri (Pentest/Red Team) için geliştirilmiştir.
-> Bu aracın, karşılıklı rıza olmadan hedef sistemlere saldırmak amacıyla kullanılması yasa dışıdır. Yürürlükteki tüm yerel, eyalet ve federal yasalara uymak son kullanıcının sorumluluğundadır. Geliştiriciler, bu programın kötüye kullanımından veya neden olduğu herhangi bir zarardan sorumlu tutulamaz.
+> **NightOps Drop**, yalnızca eğitim amaçlı ve yetkili güvenlik testleri (Pentest/Red Team) için geliştirilmiştir.
+> Bu aracın, önceden karşılıklı rıza alınmaksızın hedeflere saldırmak amacıyla kullanılması yasa dışıdır. Tüm geçerli yerel, eyalet ve federal yasalara uymak son kullanıcının sorumluluğundadır. Geliştiriciler, bu programın herhangi bir şekilde kötüye kullanılmasından veya neden olduğu hasardan sorumlu tutulamaz.
 
----
 
 <div align="center">
   <sub>Geliştirici: <a href="https://mintercoder.net">MinterCoder</a> | NightOps Security</sub>
 </div>
+
+
+---
+
+### ❤️ Geliştirmeyi Destekle
+
+Eğer NightOps Drop, Red Team operasyonlarınızda size yardımcı oluyorsa, projeyi desteklemeyi düşünebilirsiniz:
+
+👉 **https://mintercoder.gumroad.com/l/nightops-drop**
+
+Bana bir kahve ısmarla ☕
+
+👉 **https://mintercoder.gumroad.com/l/buy-me-a-coffee**

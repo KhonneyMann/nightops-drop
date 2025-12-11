@@ -5,6 +5,7 @@
 </div>
 
 <br>
+
 <div align="center">
   <em>"Silence is golden, detection is fatal."</em>
 </div>
@@ -34,6 +35,11 @@
       <img src="https://img.shields.io/badge/Course-Available-FF424D?style=for-the-badge&logo=patreon&logoColor=white" alt="Gumroad">
     </a>
   </p>
+  <p align="center">
+    <a href="https://mintercoder.gumroad.com/l/nightops-drop" target="_blank">
+      <img src="https://img.shields.io/badge/Full%20Access-Gumroad-FF424D?style=for-the-badge&logo=gumroad&logoColor=white" />
+    </a>
+  </p>
 
   <h3>
     <a href="http://nightopsdrop.mintercoder.net/">Live Demo</a> •
@@ -43,6 +49,8 @@
 </div>
 
 ---
+
+
 
 ## ⚡ What is NightOps Drop?
 
@@ -84,8 +92,13 @@ This project is part of a comprehensive cybersecurity training course. Below is 
 | **Password Protected Files**| ❌ | ✅ **(Anti-Scanner / Sandbox)** |
 | **One-Time URLs (Burn)** | ✅ | ✅ **(Self-Destruct Links)** |
 | **TTL (Time-To-Live)** | ✅ | ✅ **(Auto-Expire Links)** |
-
+| **Language Support** | 🇹🇷 TR + 🇬🇧 EN | 🇹🇷 TR + 🇬🇧 EN |
 ---
+<div align="center">
+  <a href="https://mintercoder.gumroad.com/l/nightops-drop">
+    <img src="https://img.shields.io/badge/Unlock_Full_Access-Get_it_on_Gumroad-FF424D?style=for-the-badge&logo=gumroad&logoColor=white">
+  </a>
+</div>
 
 ## 🎓 Get the Course: Source Code & Training
 
@@ -128,7 +141,7 @@ You can get immediate access to the **Full Source Code**, **Video Tutorials**, a
 ## 🎥 NightOps Drop — Demo GIF
 
 <div align="center">
-  <img src="https://images.mintercoder.net/mintercoder-main/nightops_drop_gif.gif" alt="NightOps Drop Demo" width="800">
+  <img src="https://images.mintercoder.net/mintercoder-main/readme_en_gif.gif" alt="NightOps Drop Demo" width="800">
   <br>
   <em>NightOps Drop workflow — real-time preview</em>
 </div>
@@ -152,8 +165,20 @@ You can get immediate access to the **Full Source Code**, **Video Tutorials**, a
 > **NightOps Drop** is developed for educational purposes and authorized security testing (Pentest/Red Team) only.
 > Usage of this tool for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state, and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
----
 
 <div align="center">
   <sub>Developed by <a href="https://mintercoder.net">MinterCoder</a> | NightOps Security</sub>
 </div>
+
+
+---
+
+### ❤️ Support Development
+
+If NightOps Drop helps your Red Team operations, consider supporting the project:
+
+👉 **https://mintercoder.gumroad.com/l/nightops-drop**
+
+Buy me a coffee ☕
+
+👉 **https://mintercoder.gumroad.com/l/buy-me-a-coffee**
