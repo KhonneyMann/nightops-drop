@@ -84,8 +84,8 @@ Bu proje kapsamlı bir siber güvenlik eğitiminin parçasıdır. Aşağıda, a�
 | **Gelişmiş IP Loglama** | ❌ | ✅ **(Proxy/VPN Tespiti)** |
 | **MIME-Type Spoofing** | ❌ | ✅ **(Firewall Atlatma)** |
 | **Şifre Korumalı Dosyalar**| ❌ | ✅ **(Anti-Scanner / Sandbox)** |
-| **Tek Kullanımlık URL (Burn)** | ❌ | ✅ **(Kendini İmha Eden Linkler)** |
-| **TTL (Time-To-Live)** | ❌ | ✅ **(Zaman Ayarlı Linkler)** |
+| **Tek Kullanımlık URL (Burn)** | ✅ | ✅ **(Kendini İmha Eden Linkler)** |
+| **TTL (Time-To-Live)** | ✅ | ✅ **(Zaman Ayarlı Linkler)** |
 
 ---
 
