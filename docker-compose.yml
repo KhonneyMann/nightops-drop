@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: nightops-app
+    depends_on:
+      - db
+    ports:
+      - "9000:9000"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/nightops_drop?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: nightops_drop
+      SPRING_DATASOURCE_PASSWORD: Drop123!
+    restart: always
+
+  db:
+    image: mysql:8
+    container_name: nightops-db
+    environment:
+      MYSQL_ROOT_PASSWORD: Drop123!
+      MYSQL_DATABASE: nightops_drop
+      MYSQL_USER: nightops_drop
+      MYSQL_PASSWORD: Drop123!
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  mysql_data:

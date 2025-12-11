@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Giriş Yap - NightOps Drop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/style.css}"/>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">NightOps Drop</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="section">
+                <div class="container" style="max-width: 480px;">
+                    <div class="card">
+                        <h2 class="section-title" style="text-align: center;">Giriş Yap</h2>
+                        <span th:if='${param.error}' style='text-align:center;'>
+                            <i>Kullanıcı adı veya parola hatalı!</i>
+                        </span>
+                        <span th:if='${param.logout}'>
+                            <i>Başarılı bir şekilde çıkış yapıldı.</i>
+                        </span>
+                        <form method="post" action="#" th:action='@{/authenticateTheUser}' style="display: flex; flex-direction: column; gap: 20px;">
+                            <div>
+                                <label for="username" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text);">
+                                    Kullanıcı Adı
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="username" 
+                                    name="username" 
+                                    class="link-input" 
+                                    placeholder="username"
+                                    required
+                                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                            </div>
+
+                            <div>
+                                <label for="password" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text);">
+                                    Parola
+                                </label>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    class="link-input" 
+                                    placeholder="••••••••"
+                                    required
+                                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+    </body>
+</html>
